@@ -16,6 +16,7 @@ def load_abf(filename):
     for ch in range(len(b1.segments[0].analogsignals)):
         signal = []
         for s in range(len(b1.segments)):
-            signal.append(b1.segments[s].analogsignals[ch])
+            signal.append(b1.segments[s].analogsignals[0][:, ch])
             numb = ch + 1
         chan['ch%d'%numb] = signal
+    return chan
