@@ -6,11 +6,7 @@ import numpy as np
 
 def load_abf(filename):
     """
-    Created on Tue Sep 11 10:52:17 2018
-
-    extract the analog signal(s) from ABF files
-    (generally acquired with clampex)
-
+    Extract the analog signal(s) from ABF files.
     @author: imbroscb
     """
     data = io.AxonIO(filename)
